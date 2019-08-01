@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Deploy To Staging') {
       steps {
-        sh '''cp /root/.jenkins/workspace/parking_lot_microservice_register_center_master/build/libs/eureka-0.0.1-SNAPSHOT.jar /workspace/BackEnd/eureka.jar
+        sh '''cp /root/.jenkins/workspace/roservice_register_center_master/build/libs/eureka-0.0.1-SNAPSHOT.jar /workspace/BackEnd/eureka.jar
 cd /workspace/BackEnd
 p=`jps -l | grep eureka | grep -P \'\\d+\' -o`
 sudo kill -9 $p
